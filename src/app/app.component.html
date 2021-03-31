@@ -1,53 +1,69 @@
 <header>
-  <h2>
-    Everything is personal. including this blog
-  </h2>
+  <nav class="menu">
+
+    <ul class=" menu-social-icons">
+      <li>
+        <fa-icon [icon]="faFacebookF"></fa-icon>
+      </li>
+      <li>
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </li>
+      <li>
+        <fa-icon [icon]="faTwitter"></fa-icon>
+      </li>
+      <li>
+        <fa-icon [icon]="faPinterestP"></fa-icon>
+      </li>
+    </ul>
+
+    <input #menu__toggle id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+      <span class="menu__btn__span"></span>
+    </label>
+
+    <ul class="menu__box menu-nav">
+      <li class="menu-nav__item">
+        <a class="menu__item">Home</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">About</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">My Blog</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">Contact</a>
+      </li>
+
+    </ul>
+
+  </nav>
   <h1>
     Train of Thought
   </h1>
+
+  <h2>
+    Everything is personal. including this blog
+  </h2>
+
 </header>
-<nav class="menu">
 
-  <ul class="menu-box">
-    <li class="menu-item">
-      <a>Home</a>
-    </li>
-    <li class="menu-item">
-      <a>About</a>
-    </li>
-    <li class="menu-item">
-      <a>My Blog</a>
-    </li>
-    <li class="menu-item">
-      <a>Contact</a>
-    </li>
-    <li class="menu-item">
-      <ul class="menu-social-icons">
-        <li>fb</li>
-        <li>inst</li>
-        <li>twit</li>
-        <li>pinter</li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
 <div class="post">
   <figure>
     <div class="post-img__wrapper">
-      <img src="../assets/img/1.jpg" alt="post image"/>
+      <img alt="post image" src="../assets/img/1.jpg"/>
       <div class="post-img__overlay">
-        <h2>featured post</h2>
+        <h2 class="title-decorate">featured post</h2>
       </div>
     </div>
     <figcaption>
       <section class="timing">
         <p>Jan 7</p>
-        <span>*</span>
+        <span>&#183;</span>
         <p>1 min</p>
       </section>
-      <h3 class="team__last-name">Back to Fiction: What I'm Reading This Summer</h3>
-      <p class="team__position">Create a blog post subtitle that summarizes your post in a few short, punchy sentences
+      <h3>Back to Fiction: What I'm Reading This Summer</h3>
+      <p class="post-text">Create a blog post subtitle that summarizes your post in a few short, punchy sentences
         and entices your audience to continue reading....</p>
     </figcaption>
   </figure>
@@ -57,258 +73,402 @@
     Never Miss a New Post.
   </h2>
   <form>
-    <input type="text">
-    <button>Subscribe</button>
+    <div class="input-container">
+      <label for="email-value">Enter your email *</label>
+      <input id="email-value" name="user_email" type="email" required>
+
+    </div>
+    <div class="btn-wrapper">
+      <button class="btn">Subscribe</button>
+
+    </div>
   </form>
 </section>
 
 <div class="posts-aside-container">
 
-<section class="posts-container">
-  <h2>train of thought</h2>
-  <ul class="posts">
-    <li class="posts-item">
-      <img src="../assets/img/2.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>Top 5 Items Under 20$ I Can't Live Without</h3>
-          <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
+  <section class="posts-container">
+    <h2>train of thought</h2>
+    <ul class="posts">
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/2.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>Top 5 Items Under 20$ I Can't Live Without</h3>
+            <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
 
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
           </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
-          </div>
-        </div>
-      </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/3.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>5 Pizza Places You Must Know</h3>
-          <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
-
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
-          </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/4.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>This Artist Will Blow Your Mind</h3>
-          <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/3.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>5 Pizza Places You Must Know</h3>
+            <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
 
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
           </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
-          </div>
-        </div>
-      </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/8.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>5 Questions to Ask Yourself Before Getting Married</h3>
-          <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
-
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
-          </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/5.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>Movies That Need to Be Seen on the Big Screen</h3>
-          <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/4.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>This Artist Will Blow Your Mind</h3>
+            <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
 
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
           </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
-          </div>
-        </div>
-      </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/6.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>Best Podcasts to Listen to When Traveling</h3>
-          <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
-
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
-          </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </li>
-    <li class="posts-item">
-      <img src="../assets/img/7.webp" alt="post image"/>
-      <div class="posts-wrapper">
-        <div class="posts-textContainer">
-          <section class="timing">
-            <p>Jan 7</p>
-            <span>*</span>
-            <p>1 min</p>
-          </section>
-          <h3>Back to Fiction: What I'm Reading This Summer</h3>
-          <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...</p>
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/8.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>5 Questions to Ask Yourself Before Getting Married</h3>
+            <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
 
-        </div>
-        <div class="posts-social">
-          <div class="posts-social__view-comments">
-            <p>0 view</p>
-            <p>0 comments</p>
           </div>
-          <div class="posts-social__likes">
-            <p>23</p> <span>@</span>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
+
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </li>
-<button>More Posts</button>
-  </ul>
-</section>
-<aside class="aside">
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/5.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>Movies That Need to Be Seen on the Big Screen</h3>
+            <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
 
-  <section class="aside-aboutme">
-    <h2>
-      aboute me
-    </h2>
-    <img src="../assets/img/profile.webp" alt="">
-    <p>
-      ABOUT ME
-      I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
-    </p>
-    <a href="#">Read more</a>
+          </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
+
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/6.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>Best Podcasts to Listen to When Traveling</h3>
+            <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
+
+          </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
+
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+
+      </li>
+      <li class="posts-item">
+        <img alt="post image" src="../assets/img/7.webp"/>
+        <div class="posts-wrapper">
+          <div class="posts-textContainer">
+            <section class="timing">
+              <p>Jan 7</p>
+              <span>&#183;</span>
+              <p>1 min</p>
+            </section>
+            <h3>Back to Fiction: What I'm Reading This Summer</h3>
+            <p>LCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices
+              your...</p>
+
+          </div>
+          <div class="posts-social">
+            <div class="posts-social__view-container">
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faEye"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-view">view</p>
+
+              <span class="posts-social__view-icon">
+                <span><fa-icon [icon]="faCommentAlt"></fa-icon></span>
+</span>
+              <p>0</p>
+              <p class="posts-social__view-comment">comments</p>
+            </div>
+            <div class="posts-social__likes">
+              <p>23</p>
+              <span><fa-icon [icon]="faHeart"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+    <button class="btn">More Posts</button>
+
   </section>
-<section class="aside-followme">
-  <h2>follow me</h2>
-  <ul class="aside-followme__container">
-    <li class="aside-followme__img-item" >
-      <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/01.jpg" alt="image gallary">
-    </li>
-    <li class="aside-followme__img-item" >
-      <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/02.jpg" alt="image gallary">
-    </li>
-    <li class="aside-followme__img-item" >
-      <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/03.jpg" alt="image gallary">
-    </li>
-    <li class="aside-followme__img-item" >
-    <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/04.jpg" alt="image gallary">
-  </li>
-    <li class="aside-followme__img-item" >
-    <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/05.jpg" alt="image gallary">
-  </li>
-    <li class="aside-followme__img-item" >
-    <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/06.jpg" alt="image gallary">
-  </li>
-    <li class="aside-followme__img-item" >
-    <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/07.jpg" alt="image gallary">
-  </li>
-    <li class="aside-followme__img-item" >
-    <img src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/08.jpg" alt="image gallary">
-  </li>
+  <aside class="aside">
+    <section class="aside-aboutme">
+      <h2 class="title-decorate">
+        aboute me
+      </h2>
+      <img alt="" src="../assets/img/profile.webp">
+      <p>
+        I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click
+        me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your
+        users know a little more about you.
+      </p>
+      <a href="#">Read more</a>
+    </section>
+    <section class="aside-followme">
+      <h2 class="title-decorate">follow me</h2>
+      <ul class="aside-followme__container">
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/01.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/02.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/03.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/04.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/05.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/06.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/07.jpg">
+        </li>
+        <li class="aside-followme__img-item">
+          <img
+            alt="image gallary"
+            src="https://static.parastorage.com/services/instagram-cdn/1.659.0/assets/ig-templates-accounts/Editor/Personal%20Blog/08.jpg">
+        </li>
 
-  </ul>
-</section>
-<section class="aside-social">
-  <ul class="menu-social-icons">
-    <li>fb</li>
-    <li>inst</li>
-    <li>twit</li>
-    <li>pinter</li>
-  </ul>
-</section>
-<section class="aside-subscribe">
-  <h2>
-    subscribe
-  </h2>
+      </ul>
+    </section>
+    <section class="aside-social">
+      <ul class="menu-social-icons">
+        <li>
+          <fa-icon [icon]="faFacebookF"></fa-icon>
+        </li>
+        <li>
+          <fa-icon [icon]="faInstagram"></fa-icon>
+        </li>
+        <li>
+          <fa-icon [icon]="faTwitter"></fa-icon>
+        </li>
+        <li>
+          <fa-icon [icon]="faPinterestP"></fa-icon>
+        </li>
+      </ul>
+    </section>
+    <section class="aside-subscribe">
+      <h2 class="title-decorate">
+        subscribe
+      </h2>
+      <form>
+        <label for="email-value2">Enter your email *</label>
+        <input id="email-value2" name="user_email" type="email" required>
+
+        <button class="btn">Subscribe</button>
+      </form>
+    </section>
+    <section class="aside-book">
+      <h2 class="title-decorate">my pick of the month</h2>
+      <img
+        alt=""
+        src="https://static.wixstatic.com/media/84770f_0129bae0812d4987bc00dd154323a2c5~mv2_d_1920_2880_s_2.jpg/v1/crop/x_46,y_1049,w_1874,h_1246/fill/w_284,h_188,al_c,q_80,usm_0.66_1.00_0.01/books%20new%20smaller.webp">
+      <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click
+        me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your
+        users know a little more about you.</p>
+    </section>
+  </aside>
+
+</div>
+<section class="form-container">
+  <button class="form-container__uparrow">
+    <fa-icon [icon]="faLongArrowAltUp"></fa-icon>
+  </button>
+  <h2>Drop Me a Line, Let Me Know What You Think</h2>
   <form>
-    <input type="text">
-    <button>Subscribe</button>
+    <div class="container">
+      <div class="container-input_name">
+        <label for="name">Name:</label>
+        <input id="name" name="user_name" type="text">
+      </div>
+      <div class=" container-input_last-name">
+        <label for="last-name">Last Name:</label>
+        <input id="last-name" name="user_last-name" type="text">
+      </div>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" name="user_email" type="email">
+
+
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+
+
+    <button class="btn">Submit</button>
   </form>
 </section>
-<section class="aside-book">
-  <h2>my pick of the month</h2>
-  <img src="https://static.wixstatic.com/media/84770f_0129bae0812d4987bc00dd154323a2c5~mv2_d_1920_2880_s_2.jpg/v1/crop/x_46,y_1049,w_1874,h_1246/fill/w_284,h_188,al_c,q_80,usm_0.66_1.00_0.01/books%20new%20smaller.webp" alt="">
-<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-</section>
-</aside>
-</div>
