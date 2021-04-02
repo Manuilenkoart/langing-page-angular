@@ -1,53 +1,60 @@
 <header>
+  <nav class="menu">
 
-    <nav class="menu">
-
-      <ul class=" menu-social-icons">
-        <li>
+    <ul class=" menu-social-icons">
+      <li>
+        <a href="#">
           <fa-icon [icon]="faFacebookF"></fa-icon>
-        </li>
-        <li>
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <fa-icon [icon]="faInstagram"></fa-icon>
-        </li>
-        <li>
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <fa-icon [icon]="faTwitter"></fa-icon>
-        </li>
-        <li>
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <fa-icon [icon]="faPinterestP"></fa-icon>
-        </li>
-      </ul>
+        </a>
+      </li>
+    </ul>
 
-      <input #menu__toggle id="menu__toggle" type="checkbox"/>
-      <label class="menu__btn" for="menu__toggle">
-        <span class="menu__btn__span"></span>
-      </label>
+    <input #menu__toggle id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+      <span class="menu__btn__span"></span>
+    </label>
 
-      <ul class="menu__box menu-nav">
-        <li class="menu-nav__item">
-          <a class="menu__item">Home</a>
-        </li>
-        <li class="menu-nav__item">
-          <a class="menu__item">About</a>
-        </li>
-        <li class="menu-nav__item">
-          <a class="menu__item">My Blog</a>
-        </li>
-        <li class="menu-nav__item">
-          <a class="menu__item">Contact</a>
-        </li>
+    <ul class="menu__box menu-nav">
+      <li class="menu-nav__item">
+        <a class="menu__item">Home</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">About</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">My Blog</a>
+      </li>
+      <li class="menu-nav__item">
+        <a class="menu__item">Contact</a>
+      </li>
 
-      </ul>
+    </ul>
 
-    </nav>
+  </nav>
 
 
   <h1>
     Train of Thought
   </h1>
 
-  <h2>
+  <p>
     Everything is personal. including this blog
-  </h2>
+  </p>
 
 </header>
 
@@ -56,7 +63,7 @@
     <div class="post-img__wrapper">
       <img alt="post image" src="../assets/img/1.jpg"/>
       <div class="post-img__overlay">
-        <h2 class="title-decorate">featured post</h2>
+        <p>featured post</p>
       </div>
     </div>
     <figcaption>
@@ -65,16 +72,16 @@
         <span>&#183;</span>
         <p>1 min</p>
       </section>
-      <h3>Back to Fiction: What I'm Reading This Summer</h3>
+      <h2>Back to Fiction: What I'm Reading This Summer</h2>
       <p class="post-text">Create a blog post subtitle that summarizes your post in a few short, punchy sentences
         and entices your audience to continue reading....</p>
     </figcaption>
   </figure>
 </div>
 <section class="subscribe">
-  <h2>
+  <h3>
     Never Miss a New Post.
-  </h2>
+  </h3>
   <form>
     <div class="input-container">
       <label for="email-value">Enter your email *</label>
@@ -91,7 +98,7 @@
 <div class="posts-aside-container">
 
   <section class="posts-container">
-    <h2>train of thought</h2>
+    <h2 class="title-decorate">train of thought</h2>
     <ul class="posts">
       <li class="posts-item">
         <img alt="post image" src="../assets/img/2.webp"/>
@@ -127,6 +134,7 @@
             </div>
           </div>
         </div>
+
 
       </li>
       <li class="posts-item">
@@ -352,7 +360,7 @@
   <aside class="aside">
     <section class="aside-aboutme">
       <h2 class="title-decorate">
-        aboute me
+        about me
       </h2>
       <img alt="" src="../assets/img/profile.webp">
       <p>
@@ -360,7 +368,7 @@
         me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your
         users know a little more about you.
       </p>
-      <a href="#">Read more</a>
+      <a href="#">Read more ></a>
     </section>
     <section class="aside-followme">
       <h2 class="title-decorate">follow me</h2>
@@ -409,18 +417,26 @@
       </ul>
     </section>
     <section class="aside-social">
-      <ul class="menu-social-icons">
+      <ul class=" menu-social-icons">
         <li>
-          <fa-icon [icon]="faFacebookF"></fa-icon>
+          <a href="#">
+            <fa-icon [icon]="faFacebookF"></fa-icon>
+          </a>
         </li>
         <li>
-          <fa-icon [icon]="faInstagram"></fa-icon>
+          <a href="#">
+            <fa-icon [icon]="faInstagram"></fa-icon>
+          </a>
         </li>
         <li>
-          <fa-icon [icon]="faTwitter"></fa-icon>
+          <a href="#">
+            <fa-icon [icon]="faTwitter"></fa-icon>
+          </a>
         </li>
         <li>
-          <fa-icon [icon]="faPinterestP"></fa-icon>
+          <a href="#">
+            <fa-icon [icon]="faPinterestP"></fa-icon>
+          </a>
         </li>
       </ul>
     </section>
@@ -448,10 +464,10 @@
 
 </div>
 <section class="form-container">
-  <button class="form-container__uparrow">
+  <button (click)="this.scrollUo()" class="form-container__uparrow">
     <fa-icon [icon]="faLongArrowAltUp"></fa-icon>
   </button>
-  <h2>Drop Me a Line, Let Me Know What You Think</h2>
+  <h2 >Drop Me a Line, Let Me Know What You Think</h2>
   <form>
     <div class="container">
       <div class="container-input_name">

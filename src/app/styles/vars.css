@@ -1,10 +1,20 @@
 ::ng-deep:root {
   --color1: black;
-  --color2: #8828ff;
+  --color2: #6600EA;
   --color3: white;
   --color4: red;
+--color5:grey;
 
   --font1: 'Roboto', sans-serif;
   --font2:'Playfair Display', serif;
-  --letterspacing1: 3px
+  --letterspacing0: 0;
+  --letterspacing1: 5px;
+  --letterspacing2: 10px;
+  --fs1: 37px;
+  --fs2:28px;
+  --fs3:24px;
+  --fs4:22px;
+  --fs5:16px;
+  --fs6:12px;
+  --fs7:116px;
 }

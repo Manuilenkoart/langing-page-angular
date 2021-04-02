@@ -2,16 +2,18 @@
 @import "styles/vars.css";
 @import "styles/hamburger-menu";
 
-body {
-  padding: 10px;
-}
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
+.ng-fa-icon {
+  color: var(--color1);
+  font-size: 26px;
+}
 
 header {
   text-align: center;
@@ -23,19 +25,24 @@ header {
     &:before {
       content: "";
       position: absolute;
-      width: 100%;
+      width: 120%;
       border-top: 1px solid var(--color1);
       bottom: 0;
-      left: 0;
+      left: -10%;
     }
+
+
   }
 
   h1 {
     font-family: var(--font2);
+    font-size: var(--fs1);
+    margin: 10px 0 15px 0;
   }
 
-  h2 {
+  p {
     font-weight: 300;
+    font-size: var(--fs6);
     text-transform: uppercase;
     letter-spacing: var(--letterspacing1);
   }
@@ -44,15 +51,16 @@ header {
 
 .post {
   position: relative;
-  margin: 40px auto 0 auto;
+  margin-top: 65px;
+  border: 1px solid var(--color1);
 
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 120%;
     border-top: 1px solid var(--color1);
-    top: -40px;
-    left: 0;
+    top: -45px;
+    left: -10%;
   }
 
   &-img__wrapper {
@@ -61,15 +69,27 @@ header {
 
   &-img__overlay {
     position: absolute;
-    top: -24px;
+    top: -20px;
     left: -1px;
     padding: 10px 20px;
     background-color: var(--color3);
     border: 1px solid var(--color1);
 
-    h2 {
-      font-size: 15px;
+    p {
+      font-size: var(--fs6);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: var(--letterspacing1);
     }
+  }
+
+  .timing {
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: var(--fs2);
+    margin: 20px;
   }
 
   &-text {
@@ -88,14 +108,15 @@ header {
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 120%;
     border-top: 1px solid var(--color1);
-    left: 0;
+    left: -10%;
     top: 0;
   }
 
-  h2 {
+  h3 {
     font-family: var(--font2);
+    font-size: var(--fs3);
   }
 
   form {
@@ -106,11 +127,14 @@ header {
       display: flex;
       flex-direction: column;
 
-
+      label {
+        font-size: var(--fs5);
+      }
     }
 
     button {
       margin-left: 10px;
+      font-size: var(--fs6);
     }
   }
 ;
@@ -122,10 +146,10 @@ header {
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 120%;
     border-top: 1px solid var(--color1);
     top: 0;
-    left: 0;
+    left: -10%;
   }
 }
 
@@ -136,38 +160,56 @@ header {
     flex-direction: column;
 
     button {
-
+      margin-top: 20px;
       align-self: center;
+      font-size: var(--fs5);
+      font-weight: 300;
     }
   }
 
   &-item {
     border: 1px solid var(--color1);
     margin-bottom: 20px;
-
   }
 
   &-wrapper {
-
-
     padding: 20px;
   }
 
   &-textContainer {
 
+    h3 {
+      font-size: var(--fs4);
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: var(--fs5);
+      font-weight: 300;
+    }
+
   }
 
   &-social {
+    margin-top: 40px;
+    padding-top: 15px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--color1);
+    border-top: 1px solid var(--color5);
+
+    .ng-fa-icon {
+      color: var(--color1);
+      font-size: var(--fs5);
+    }
 
     &__view {
       &-container {
         display: flex;
+        align-items: center;
 
         p {
           margin-right: 20px;
+          font-size: var(--fs6);
         }
 
         span {
@@ -193,49 +235,48 @@ header {
 
       span {
         margin-left: 5px;
-        color: var(--color4);
+
+        .ng-fa-icon {
+          color: var(--color4);
+
+        }
       }
     }
   }
 }
 
-.timing {
-  display: flex;
-
-  span {
-    margin: 0 5px;
-  }
-}
 
 .aside {
 
 
   &-aboutme {
     position: relative;
+    margin-top: 40px;
 
     &:before {
       content: "";
       position: absolute;
-      width: 100%;
+      width: 120%;
       border-top: 1px solid var(--color1);
       top: 0;
-      left: 0;
+      left: -10%;
     }
 
-    h2 {
-      margin: 40px 0;
 
+    img {
+      border: 1px solid var(--color1);
     }
 
     p {
       margin: 30px 0;
       font-weight: 300;
+      font-size: var(--fs5);
     }
   }
 
   &-followme {
-
     position: relative;
+    margin-top: 40px;
 
     &:before {
       content: "";
@@ -249,7 +290,6 @@ header {
     &__container {
       display: flex;
       flex-wrap: wrap;
-      margin: 40px 0;
     }
 
     &__img-item {
@@ -259,8 +299,7 @@ header {
   }
 
   &-social {
-    padding: 20px 0;
-
+    padding: 40px 0;
 
 
     .menu-social-icons {
@@ -271,7 +310,7 @@ header {
 
   &-subscribe {
     position: relative;
-    padding-top: 20px;
+
     &:before {
       content: "";
       position: absolute;
@@ -280,10 +319,15 @@ header {
       top: 0;
       left: 0;
     }
+
     form {
       display: flex;
       flex-direction: column;
-      margin: 40px 0;
+
+      label {
+        font-size: var(--fs5);
+        letter-spacing: var(--letterspacing0);
+      }
 
       button {
         margin-top: 10px;
@@ -293,6 +337,7 @@ header {
 
   &-book {
     position: relative;
+    margin-top: 40px;
 
     &:before {
       content: "";
@@ -303,12 +348,14 @@ header {
       left: 0;
     }
 
-    h2 {
-      margin: 20px 0;
+
+    img {
+      border: 1px solid var(--color1);
     }
 
     p {
       margin: 20px 0;
+      font-weight: 300;
     }
   }
 }
@@ -317,28 +364,29 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 50px 0;
+  margin: 40px 0;
+
 
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 120%;
     border-top: 1px solid var(--color1);
     top: 0;
-    left: 0;
+    left: -10%;
   }
 
   &__uparrow {
-    margin: 0 auto;
-    font-size: 40px;
+    margin: 40px 0;
     border: none;
     background-color: white;
-    font-weight: 100;
   }
 
   h2 {
     text-align: center;
     font-family: var(--font2);
+    margin-bottom: 20px;
+
   }
 
   form {
@@ -355,6 +403,8 @@ header {
 
     button {
       margin-top: 20px;
+      font-size: var(--fs5);
+      font-weight: 300;
     }
 
   }
@@ -362,8 +412,11 @@ header {
 
 .title-decorate {
   text-transform: uppercase;
-  letter-spacing: var(--letterspacing1);
+  letter-spacing: var(--letterspacing2);
+  font-size: var(--fs4);
   font-weight: 300;
+  padding: 40px 0;
+
 }
 
 .menu-social-icons {
@@ -396,132 +449,261 @@ input, textarea {
 }
 
 
-@media screen and (min-width: 768px) {
-
-
-header{
+.timing {
   display: flex;
-  flex-direction: column-reverse;
 
+  p {
+    font-size: var(--fs6);
 
-  .menu {
+  }
+
+  span {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 50%;
+  }
+  header {
+    margin: 0 auto;
     display: flex;
-    flex-direction: row-reverse;
-    label,input {
-      display: none;
+    flex-direction: column-reverse;
+
+    h1 {
+      font-size: var(--fs7);
     }
-    .menu-social-icons{
-      align-items: center;
-      border: none;
-      border-right: 1px solid var(--color1);
+
+    p {
+      margin-top: 40px;
+      font-size: var(--fs4);
     }
-    &:before{
-      width: 102%;
-      left: -1%;
-    }
-    &:after{
-      content: "";
-      position: absolute;
-      width: 102%;
-      border-top: 1px solid var(--color1);
-      top: 20px;
-      left: -1%;
-    }
-    &__btn{
-      display: none;
-    }
-    &-nav {
-position: static;
-      visibility: visible;
-      width: calc(100%*0.8);
+
+    .menu {
       display: flex;
-      justify-content: space-around;
-      padding: 0;
-      border: 1px solid var(--color1);
-      background-color: var(--color3);
-      box-shadow: none;
-      &__item {
-        width: inherit;
-        text-align: center;
+      flex-direction: row-reverse;
+
+      label, input {
+        display: none;
+      }
+
+      .menu-social-icons {
+        align-items: center;
         border-right: 1px solid var(--color1);
 
-        &:last-child {
-          border-right: none;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 120%;
+          border-top: 1px solid var(--color1);
+          bottom: 0;
+          left: -10%;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 120%;
+          border-top: 1px solid var(--color1);
+          top: 20px;
+          left: -10%;
+        }
+
+        .ng-fa-icon {
+          font-size: var(--fs4);
+
+        }
+      }
+
+      &:before {
+        width: 100%;
+        left: 0;
+      }
+
+
+      &__btn {
+        display: none;
+      }
+
+      &__item {
+        font-size: var(--fs5);
+        font-weight: 300;
+
+      }
+
+      &-nav {
+        position: static;
+        visibility: visible;
+        width: calc(100% * 0.8);
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        border: 1px solid var(--color1);
+        background-color: var(--color3);
+        box-shadow: none;
+
+        &__item {
+          width: inherit;
+          text-align: center;
+          border-right: 1px solid var(--color1);
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      &-social-icons {
+        width: calc(100% * 0.2);
+        border: 1px solid var(--color1);
+        display: flex;
+        justify-content: space-around;
+        border-left: none;
+      }
+    }
+  }
+
+
+  .post {
+    margin-top: 100px;
+    border: 1px solid var(--color1);
+
+    &:before {
+      width: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &-img__overlay {
+
+      p {
+        font-size: var(--fs4);
+
+
+      }
+    }
+
+    &-text {
+      display: block;
+      margin: 20px;
+    }
+  }
+
+
+  .subscribe {
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+      font-size: var(--fs1);
+    }
+
+    form {
+      button {
+        font-size: var(--fs5);
+        font-weight: 300;
+      }
+    }
+  }
+
+  .posts-aside-container {
+    display: flex;
+  }
+  .posts-container {
+    width: 60%;
+
+    .posts {
+      &-item {
+        display: flex;
+      }
+
+    }
+  }
+  .posts-social {
+    p {
+      margin-right: 5px;
+    }
+
+    &__view-icon {
+      display: none;
+    }
+
+    &__view-view {
+      display: block;
+    }
+
+    &__view-comment {
+      display: block;
+    }
+  }
+
+
+  .aside {
+    position: relative;
+    width: 30%;
+    margin-left: 10%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 98%;
+      border-left: 1px solid var(--color1);
+      top: 1%;
+      left: -10%;
+    }
+
+    &-aboutme {
+      margin-top: 0;
+
+      img {
+        width: 100%;
+      }
+
+      &:before {
+        border-top: none;
+      }
+
+
+    }
+
+
+    &-followme {
+      img {
+        width: 100%;
+      }
+    }
+
+
+    &-book {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-container {
+    h2 {
+      font-size: var(--fs1);
+    }
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+
+
+        &-input_name, &-input_last-name {
+          width: 45%;
         }
       }
     }
-
-
-
-    &-social-icons {
-      width: calc(100%*0.2);
-      border: 1px solid var(--color1);
-      display: flex;
-      justify-content: space-around;
-      border-left: none;
-
-    }
   }
-
-}
-
-
-.post {
-  width: 80%;
-  margin-top: 100px;
-  &:before{
-    width: 0;
-  }
-}
-
-
-.subscribe {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.posts-aside-container {
-  display: flex;
-}
-.posts-container{
-  width: 60%;
-}
-.aside {
-position: relative;
-  width: 30%;
-  margin-left: 10%;
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 98%;
-    border-left: 1px solid var(--color1);
-    top: 1%;
-    left: -10%;
-  }
-  &-aboutme {
-    &:before {
-      border-top: none;
-    }
-  }
-}
-
-.form-container {
-
-  form {
-    width: 80%;
-    margin: 0 auto;
-    .container {
-      display: flex;
-      justify-content: space-between;
-
-      &-input_name,&-input_last-name {
-        width: 45%;
-      }
-    }
-  }
-}
-
 
 
 }

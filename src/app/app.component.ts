@@ -18,4 +18,11 @@ export class AppComponent {
   faCommentAlt = faCommentAlt;
   faEye = faEye;
   faLongArrowAltUp = faLongArrowAltUp;
+
+  scrollUo(): void{
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
 }
