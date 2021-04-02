@@ -30,8 +30,6 @@ header {
       bottom: 0;
       left: -10%;
     }
-
-
   }
 
   h1 {
@@ -217,10 +215,6 @@ header {
         }
       }
 
-      &-icon {
-
-      }
-
       &-view {
         display: none;
       }
@@ -238,7 +232,6 @@ header {
 
         .ng-fa-icon {
           color: var(--color4);
-
         }
       }
     }
@@ -247,7 +240,6 @@ header {
 
 
 .aside {
-
 
   &-aboutme {
     position: relative;
@@ -261,7 +253,6 @@ header {
       top: 0;
       left: -10%;
     }
-
 
     img {
       border: 1px solid var(--color1);
@@ -301,11 +292,9 @@ header {
   &-social {
     padding: 40px 0;
 
-
     .menu-social-icons {
       margin: 0 auto;
     }
-
   }
 
   &-subscribe {
@@ -348,7 +337,6 @@ header {
       left: 0;
     }
 
-
     img {
       border: 1px solid var(--color1);
     }
@@ -365,7 +353,6 @@ header {
   display: flex;
   flex-direction: column;
   margin: 40px 0;
-
 
   &:before {
     content: "";
@@ -416,14 +403,12 @@ header {
   font-size: var(--fs4);
   font-weight: 300;
   padding: 40px 0;
-
 }
 
 .menu-social-icons {
   width: 90%;
   display: flex;
   justify-content: space-around;
-
 }
 
 .btn {
@@ -454,7 +439,6 @@ input, textarea {
 
   p {
     font-size: var(--fs6);
-
   }
 
   span {
@@ -512,7 +496,6 @@ input, textarea {
 
         .ng-fa-icon {
           font-size: var(--fs4);
-
         }
       }
 
@@ -521,7 +504,6 @@ input, textarea {
         left: 0;
       }
 
-
       &__btn {
         display: none;
       }
@@ -529,7 +511,6 @@ input, textarea {
       &__item {
         font-size: var(--fs5);
         font-weight: 300;
-
       }
 
       &-nav {
@@ -581,8 +562,6 @@ input, textarea {
 
       p {
         font-size: var(--fs4);
-
-
       }
     }
 
@@ -704,8 +683,6 @@ input, textarea {
       }
     }
   }
-
-
 }
 
 @media screen and (min-width: 1024px) {
